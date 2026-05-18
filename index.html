@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>UniBalance</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <img
+                src="logo.png"
+                alt="Logo UniBalance"
+                class="logo-img"
+            >
+
+            <span>
+                UniBalance
+            </span>
+
+        </div>
+
+        <nav>
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#emociones">
+                Emociones
+            </a>
+
+            <a href="#registro">
+                Registro
+            </a>
+
+            <a href="#premium">
+                Premium
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+        </nav>
+
+        <button class="btn-login">
+            Ingresar
+        </button>
+
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <section
+        class="hero"
+        id="inicio"
+    >
+
+        <div class="hero-text">
+
+            <h1>
+                Tu bienestar emocional
+                en un solo lugar
+            </h1>
+
+            <p>
+                UniBalance ayuda a estudiantes
+                y jóvenes a controlar el estrés,
+                emociones y hábitos saludables.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn">
+                    Comenzar
+                </button>
+
+                <button class="secondary-btn">
+                    Ver Premium
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <h3>
+                Estado emocional
+            </h3>
+
+            <div class="mood-container">
+
+                <button class="mood">
+                    😄
+                </button>
+
+                <button class="mood">
+                    🙂
+                </button>
+
+                <button class="mood">
+                    😔
+                </button>
+
+                <button class="mood">
+                    😣
+                </button>
+
+            </div>
+
+            <p id="mood-text">
+                ¿Cómo te sientes hoy?
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <div class="card">
+
+            <h2>
+                Seguimiento emocional
+            </h2>
+
+            <p>
+                Registra tus emociones
+                diariamente y analiza
+                tu estado mensual.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>
+                Rutinas saludables
+            </h2>
+
+            <p>
+                Mejora hábitos de sueño,
+                hidratación y descanso.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>
+                Bienestar emocional
+            </h2>
+
+            <p>
+                Recibe recomendaciones
+                personalizadas según
+                tu nivel de estrés.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- TEST EMOCIONAL -->
+
+    <section
+        class="emotion-app"
+        id="emociones"
+    >
+
+        <h2>
+            Test emocional inteligente 💜
+        </h2>
+
+        <div class="emotion-card">
+
+            <h3 id="pregunta">
+                Pregunta aquí
+            </h3>
+
+            <div id="opciones"></div>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="siguientePregunta()"
+            >
+                Siguiente
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RESULTADO -->
+
+    <section
+        class="emotion-result"
+        id="resultado-test"
+        style="display:none;"
+    >
+
+        <div class="result-card">
+
+            <h2>
+                Resultado emocional 🌿
+            </h2>
+
+            <h3 id="nivel"></h3>
+
+            <p id="mensaje"></p>
+
+            <div class="recommended-box">
+
+                <h4>
+                    Caja recomendada 💜
+                </h4>
+
+                <p id="caja"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- REGISTRO -->
+
+    <section
+        class="monthly-register"
+        id="registro"
+    >
+
+        <h2>
+            Registro Emocional Mensual
+        </h2>
+
+        <form id="emotion-form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Tu nombre"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Correo electrónico"
+            >
+
+            <select id="emotion">
+
+                <option value="">
+                    Selecciona una emoción
+                </option>
+
+                <option value="Feliz 😄">
+                    Feliz 😄
+                </option>
+
+                <option value="Tranquila 🙂">
+                    Tranquila 🙂
+                </option>
+
+                <option value="Triste 😔">
+                    Triste 😔
+                </option>
+
+                <option value="Estresada 😣">
+                    Estresada 😣
+                </option>
+
+            </select>
+
+            <input
+                type="number"
+                id="stress-level"
+                placeholder="Nivel de estrés (1-10)"
+            >
+
+            <input
+                type="number"
+                id="sleep-hours"
+                placeholder="Horas de sueño"
+            >
+
+            <textarea
+                id="comment"
+                placeholder="¿Cómo te sientes hoy?"
+            ></textarea>
+
+            <button
+                type="submit"
+                class="primary-btn"
+            >
+                Guardar Registro
+            </button>
+
+        </form>
+
+        <div id="records-container"></div>
+
+    </section>
+
+
+
+    <!-- PREMIUM -->
+
+    <section
+        class="premium"
+        id="premium"
+    >
+
+        <div class="premium-info">
+
+            <h2>
+                UniBalance Premium
+            </h2>
+
+            <p>
+                Accede a estadísticas,
+                meditaciones y cajas emocionales.
+            </p>
+
+            <ul>
+
+                <li>
+                    ✔ Seguimiento avanzado
+                </li>
+
+                <li>
+                    ✔ Estadísticas mensuales
+                </li>
+
+                <li>
+                    ✔ Caja emocional personalizada
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <h3>
+                Plan Premium
+            </h3>
+
+            <span>
+                $10.000 CLP
+            </span>
+
+            <p>
+                mensuales
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer id="contacto">
+
+        <div class="contact-info">
+
+            <h3>
+                Contáctanos 💜
+            </h3>
+
+            <p>
+                En UniBalance queremos acompañarte
+                en tu bienestar emocional 🌿
+            </p>
+
+            <p>
+                Nunca estás sola/o. Siempre puedes
+                pedir apoyo, respirar y volver a intentarlo ✨
+            </p>
+
+            <div class="contact-number">
+                📞 +56 9 6117 4549
+            </div>
+
+            <a
+                href="https://wa.me/56961174549"
+                class="contact-btn"
+                target="_blank"
+            >
+                Hablar por WhatsApp
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
